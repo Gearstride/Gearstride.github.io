@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Gearstride</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Rubik+Distressed&display=swap" rel="stylesheet">
+  <style>
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://www.transparenttextures.com/patterns/gear.png') repeat;
+      background-size: 150px;
+      opacity: 0.06;
+      animation: scrollBackground 40s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes scrollBackground {
+      0% { background-position: 0 0; }
+      100% { background-position: 800px 800px; }
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 100vh;
+
+      margin: 0;
+      padding: 0;
+      font-family: 'Rubik Distressed', cursive;
+      background: radial-gradient(circle at top, #001f3f, #004d33);
+      color: white;
+      min-height: 100vh;
+      overflow-x: hidden;
+    
+    }
+
+    h1 {
+      font-family: 'Bangers', cursive;
+      font-size: 4.5rem;
+      text-align: center;
+      margin-top: 3rem;
+      animation: pulseZoom 2.5s ease-in-out infinite;
+      color: #FFD700;
+    }
+
+    .section {
+      padding: 5rem 2rem 3rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .box {
+      background: linear-gradient(to top right, rgba(255,255,255,0.07), rgba(255,255,255,0.03));
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      text-align: center;
+    }
+
+    .box:hover {
+      transform: scale(1.03);
+      box-shadow: 0 16px 32px rgba(0,0,0,0.3);
+    }
+
+    .box h2 {
+      font-family: 'Bangers', cursive;
+      font-size: 2.2rem;
+      color: #FFD700;
+      margin-bottom: 1rem;
+    }
+
+    .box p {
+      font-size: 1.15rem;
+      line-height: 1.7;
+      color: #f1f1f1;
+    }
+
+    footer {
+      margin-top: auto;
+      margin-top: 4rem;
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      background: #002922;
+      color: #ccc;
+      border-top: 2px solid #FFD700;
+    }
+
+    @keyframes pulseZoom {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+      100% { transform: scale(1); }
+    }
+      .intro-section {
+      padding: 4rem 2rem;
+      background: linear-gradient(135deg, #004d33, #001f3f);
+      border-bottom: 4px solid #FFD700;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      text-align: center;
+      animation: fadeSlideDown 1s ease;
+    }
+
+    @keyframes fadeSlideDown {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+</style>
+</head>
+<body>
+  <section class="intro-section">
+    <h1>About Gearstride</h1>
+  </section>
+  <section class="section">
+    <div class="box">
+      <h2>Our Mission</h2>
+      <p>Gearstride was created to blend imagination with creativity. We tell stories, build experiences, and connect adventurers through immersive content and engaging communities.</p>
+    </div>
+    <div class="box">
+      <h2>Core Beliefs</h2>
+      <p>We value originality, collaboration, and curiosity. From visual design to strategic ideas, every detail fuels our passion to go beyond the ordinary.</p>
+    </div>
+    <div class="box">
+      <h2>Future Vision</h2>
+      <p>The journey ahead is electric. With every new release, expansion, or creation, we strive to elevate the standard for immersive storytelling and creative freedom.</p>
+    </div>
+    
+  </section>
+  <footer>
+    &copy; 2025 Gearstride. All rights reserved.
+  </footer>
+</body>
+</html>
