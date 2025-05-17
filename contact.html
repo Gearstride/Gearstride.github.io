@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Gearstride</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Rubik+Distressed&display=swap" rel="stylesheet">
+  <style>
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://www.transparenttextures.com/patterns/gear.png') repeat;
+      background-size: 200px;
+      opacity: 0.05;
+      animation: scrollBackground 60s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes scrollBackground {
+      0% { background-position: 0 0; }
+      100% { background-position: 1000px 1000px; }
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Rubik Distressed', cursive;
+      background: linear-gradient(to bottom right, #004d33, #001f3f);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-family: 'Bangers', cursive;
+      font-size: 4rem;
+      margin-bottom: 0.5rem;
+      animation: pulseZoom 2.5s ease-in-out infinite;
+    }
+
+    p {
+      font-size: 1.3rem;
+      max-width: 600px;
+      text-align: center;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    form {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 90%;
+      max-width: 500px;
+      position: relative;
+      animation: fadeSlide 1s ease;
+    }
+
+    input, textarea {
+      padding: 0.8rem;
+      border: none;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 1rem;
+      background: #fefcf5;
+      color: #001f3f;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #999;
+    }
+
+    button {
+      background-color: #FFD700;
+      color: #001f3f;
+      padding: 1rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      font-family: 'Bangers', cursive;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e6c200;
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    @keyframes pulseZoom {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes fadeSlide {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Contact Us</h1>
+  <p>If you have any questions, feedback, or collaboration ideas, fill out the form below. We’d love to hear from you! Let’s connect and build something awesome together.</p>
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+  <footer>
+    &copy; 2025 Gearstride. All rights reserved.
+  </footer>
+</body>
+</html>
