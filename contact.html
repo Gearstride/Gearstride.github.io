@@ -27,6 +27,12 @@
       100% { background-position: 800px 800px; }
     }
 
+    @keyframes pulseZoom {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+      100% { transform: scale(1); }
+    }
+
     body {
       display: flex;
       flex-direction: column;
@@ -46,6 +52,7 @@
       text-align: center;
       margin-top: 3rem;
       color: #FFD700;
+      animation: pulseZoom 2.5s ease-in-out infinite;
     }
 
     form {
