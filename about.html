@@ -32,16 +32,12 @@
       flex-direction: column;
       justify-content: space-between;
       min-height: 100vh;
-
-      /* corrected duplicated property */
       margin: 0;
       padding: 0;
       font-family: 'Rubik Distressed', cursive;
       background: radial-gradient(circle at top, #001f3f, #004d33);
       color: white;
-      min-height: 100vh;
       overflow-x: hidden;
-    
     }
 
     h1 {
@@ -53,45 +49,47 @@
       color: #FFD700;
     }
 
-    .section {
-      padding: 5rem 2rem 3rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .box {
-      background: linear-gradient(to top right, rgba(255,255,255,0.07), rgba(255,255,255,0.03));
-      border-radius: 16px;
+    form {
+      max-width: 600px;
+      margin: 3rem auto;
       padding: 2rem;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
       box-shadow: 0 12px 28px rgba(0,0,0,0.25);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
     }
 
-    .box:hover {
-      transform: scale(1.03);
-      box-shadow: 0 16px 32px rgba(0,0,0,0.3);
+    input, textarea {
+      padding: 1rem;
+      border: none;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 1.1rem;
+      background: #fefcf5;
+      color: #001f3f;
     }
 
-    .box h2 {
+    button {
+      background-color: #FFD700;
+      color: #001f3f;
+      padding: 1rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.2rem;
       font-family: 'Bangers', cursive;
-      font-size: 2.2rem;
-      color: #FFD700;
-      margin-bottom: 1rem;
+      cursor: pointer;
+      transition: 0.3s ease;
     }
 
-    .box p {
-      font-size: 1.15rem;
-      line-height: 1.7;
-      color: #f1f1f1;
+    button:hover {
+      background-color: #e6c200;
+      transform: scale(1.05);
     }
 
     footer {
       margin-top: auto;
-      margin-top: 4rem;
       padding: 2rem;
       text-align: center;
       font-size: 0.9rem;
@@ -105,7 +103,8 @@
       50% { transform: scale(1.08); }
       100% { transform: scale(1); }
     }
-      .intro-section {
+
+    .intro-section {
       padding: 4rem 2rem;
       background: linear-gradient(135deg, #004d33, #001f3f);
       border-bottom: 4px solid #FFD700;
@@ -118,11 +117,27 @@
       0% { opacity: 0; transform: translateY(-20px); }
       100% { opacity: 1; transform: translateY(0); }
     }
+      .success-message {
+      display: none;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #00ff99;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      margin-top: 2rem;
+      animation: fadeInScale 0.8s ease-out;
+    }
+
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.9); }
+      100% { opacity: 1; transform: scale(1); }
+    }
 </style>
 </head>
 <body>
   <section class="intro-section">
-    
     <h1>About Gearstride</h1>
     <nav style="margin-top: 2rem;">
       <a href="index.html" style="margin: 0 1rem; color: #FFD700; text-decoration: none; font-weight: bold; font-size: 1.2rem;">Home</a>
@@ -131,23 +146,19 @@
       <a href="videos.html" style="margin: 0 1rem; color: #FFD700; text-decoration: none; font-weight: bold; font-size: 1.2rem;">Videos</a>
     </nav>
   </section>
-  <section class="section">
-    <div class="box">
-      <h2>Our Mission</h2>
-      <p>Gearstride was created to blend imagination with creativity. We tell stories, build experiences, and connect adventurers through immersive content and engaging communities.</p>
-    </div>
-    <div class="box">
-      <h2>Core Beliefs</h2>
-      <p>We value originality, collaboration, and curiosity. From visual design to strategic ideas, every detail fuels our passion to go beyond the ordinary.</p>
-    </div>
-    <div class="box">
-      <h2>Future Vision</h2>
-      <p>The journey ahead is electric. With every new release, expansion, or creation, we strive to elevate the standard for immersive storytelling and creative freedom.</p>
-    </div>
-    
-  </section>
+
+  <section style="padding: 5rem 2rem; display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 2rem;">
+  <h2 style="text-align: center; font-family: 'Bangers', cursive; font-size: 2.8rem; color: #FFD700; text-shadow: 2px 2px #000;">Our Story</h2>
+  <div style="max-width: 960px; width: 90%; padding: 3rem; background: linear-gradient(145deg, rgba(0,0,0,0.5), rgba(0,0,0,0.3)); border-left: 6px solid #FFD700; border-radius: 20px; box-shadow: 0 14px 34px rgba(0,0,0,0.4); font-size: 1.3rem; line-height: 1.9;">
+    <p>Gearstride is a brand built on imagination, adventure, and creativity. What began as a fun idea quickly evolved into a full-blown project, crafted with passion and dedication.</p>
+    <p>Our mission is to inspire a community of dreamers, gamers, and creators to explore new horizons together. Whether it's through our videos, designs, or collaborations—Gearstride represents motion, momentum, and originality.</p>
+    <p>We're just getting started. Thank you for joining us on this journey.</p>
+  </div>
+</section>
+
   <footer>
     &copy; 2025 Gearstride. All rights reserved.
   </footer>
+
 </body>
 </html>
