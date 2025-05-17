@@ -45,7 +45,6 @@
       font-size: 4.5rem;
       text-align: center;
       margin-top: 3rem;
-      animation: pulseZoom 2.5s ease-in-out infinite;
       color: #FFD700;
     }
 
@@ -98,26 +97,15 @@
       border-top: 2px solid #FFD700;
     }
 
-    @keyframes pulseZoom {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.08); }
-      100% { transform: scale(1); }
-    }
-
     .intro-section {
       padding: 4rem 2rem;
       background: linear-gradient(135deg, #004d33, #001f3f);
       border-bottom: 4px solid #FFD700;
       box-shadow: 0 10px 20px rgba(0,0,0,0.3);
       text-align: center;
-      animation: fadeSlideDown 1s ease;
     }
 
-    @keyframes fadeSlideDown {
-      0% { opacity: 0; transform: translateY(-20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-      .success-message {
+    .success-message {
       display: none;
       text-align: center;
       font-size: 1.5rem;
@@ -134,47 +122,47 @@
       0% { opacity: 0; transform: scale(0.9); }
       100% { opacity: 1; transform: scale(1); }
     }
-</style>
+  </style>
 </head>
 <body>
   <section class="intro-section">
     <h1>Contact Us</h1>
     <nav style="margin-top: 2rem;">
-      <a href="index.html" style="margin: 0 1rem; color: #FFD700; text-decoration: none; font-weight: bold; font-size: 1.2rem;">Home</a>
-      <a href="about.html" style="margin: 0 1rem; color: #FFD700; text-decoration: none; font-weight: bold; font-size: 1.2rem;">About</a>
-      <a href="contact.html" style="margin: 0 1rem; color: #FFD700; text-decoration: none; font-weight: bold; font-size: 1.2rem;">Contact</a>
-      <a href="videos.html" style="margin: 0 1rem; color: #FFD700; text-decoration: none; font-weight: bold; font-size: 1.2rem;">Videos</a>
+      <a href="./index.html" style="margin: 0 1rem; color: #FFD700; text-decoration: none; font-weight: bold; font-size: 1.2rem;">Home</a>
+      <a href="./about.html" style="margin: 0 1rem; color: #FFD700; text-decoration: none; font-weight: bold; font-size: 1.2rem;">About</a>
+      <a href="./contact.html" style="margin: 0 1rem; color: #FFD700; text-decoration: none; font-weight: bold; font-size: 1.2rem;">Contact</a>
+      <a href="./videos.html" style="margin: 0 1rem; color: #FFD700; text-decoration: none; font-weight: bold; font-size: 1.2rem;">Videos</a>
     </nav>
   </section>
 
-  <section style="padding: 5rem 2rem; background: none; border-top: 3px solid #FFD700; ">
-  <h2 style="text-align: center; font-family: 'Bangers', cursive; font-size: 2.5rem; color: #FFD700; margin-bottom: 2rem;">Send Us a Message</h2>
-  <form action="https://formsubmit.co/gearstridecontact@gmail.com" method="POST" enctype="application/x-www-form-urlencoded" onsubmit="showSuccess(event)" style="max-width: 800px; margin: 0 auto; padding: 3rem; background: rgba(0, 0, 0, 0.4); border-radius: 20px; box-shadow: 0 12px 40px rgba(0,0,0,0.3); display: flex; flex-direction: column; gap: 1.5rem;">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_max" value="2">
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea name="message" maxlength="500" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-    <p style="margin-top: 1rem; font-size: 0.95rem; color: #ccc; text-align: center;">Note: Misuse such as spam or trolling may result in a permanent ban from contacting us.</p>
-  </form>
-<div id="successMessage" class="success-message">Message sent successfully!</div>
-</section>
+  <section style="padding: 5rem 2rem; background: none; border-top: 3px solid #FFD700;">
+    <h2 style="text-align: center; font-family: 'Bangers', cursive; font-size: 2.5rem; color: #FFD700; margin-bottom: 2rem;">Send Us a Message</h2>
+    <form action="https://formsubmit.co/gearstridecontact@gmail.com" method="POST" enctype="application/x-www-form-urlencoded" onsubmit="showSuccess(event)" style="max-width: 800px; margin: 0 auto; padding: 3rem; background: rgba(0, 0, 0, 0.4); border-radius: 20px; box-shadow: 0 12px 40px rgba(0,0,0,0.3); display: flex; flex-direction: column; gap: 1.5rem;">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_max" value="2">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea name="message" maxlength="500" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+      <p style="margin-top: 1rem; font-size: 0.95rem; color: #ccc; text-align: center;">Note: Misuse such as spam or trolling may result in a permanent ban from contacting us.</p>
+    </form>
+    <div id="successMessage" class="success-message">Message sent successfully!</div>
+  </section>
 
   <footer>
     &copy; 2025 Gearstride. All rights reserved.
   </footer>
-<script>
-  function showSuccess(event) {
-    event.preventDefault();
-    const form = event.target;
-    const message = document.getElementById('successMessage');
-    message.style.display = 'block';
-    setTimeout(() => {
-      message.style.display = 'none';
-      form.submit();
-    }, 3000);
-  }
-</script>
+  <script>
+    function showSuccess(event) {
+      event.preventDefault();
+      const form = event.target;
+      const message = document.getElementById('successMessage');
+      message.style.display = 'block';
+      setTimeout(() => {
+        message.style.display = 'none';
+        form.submit();
+      }, 3000);
+    }
+  </script>
 </body>
 </html>
