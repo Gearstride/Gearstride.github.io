@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Videos - Gearstride</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Rubik+Distressed&display=swap" rel="stylesheet">
+  <style>
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://www.transparenttextures.com/patterns/gear.png') repeat;
+      background-size: 150px;
+      opacity: 0.06;
+      animation: scrollBackground 40s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes scrollBackground {
+      0% { background-position: 0 0; }
+      100% { background-position: 800px 800px; }
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      font-family: 'Rubik Distressed', cursive;
+      background: radial-gradient(circle at top, #001f3f, #004d33);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-family: 'Bangers', cursive;
+      font-size: 4.5rem;
+      text-align: center;
+      margin-top: 3rem;
+      color: #FFD700;
+      animation: pulseZoom 2.5s ease-in-out infinite;
+    }
+
+    .intro-section {
+      padding: 4rem 2rem;
+      background: linear-gradient(135deg, #004d33, #001f3f);
+      border-bottom: 4px solid #FFD700;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      text-align: center;
+    }
+
+    .video-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 4rem 2rem;
+    }
+
+    .video-box {
+      background: rgba(0,0,0,0.4);
+      padding: 1rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      max-width: 500px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 280px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    nav {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      color: #FFD700;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      margin-top: auto;
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      background: #002922;
+      color: #ccc;
+      border-top: 2px solid #FFD700;
+    }
+      @keyframes pulseZoom {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+      100% { transform: scale(1); }
+    }
+
+    iframe {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: none;
+      border-radius: 10px;
+    }
+</style>
+</head>
+<body>
+  <section class="intro-section">
+    <h1>Our Videos</h1>
+    <nav>
+      <a href="./index.html">Home</a>
+      <a href="./about.html">About</a>
+      <a href="./contact.html">Contact</a>
+      <a href="./videos.html">Videos</a>
+    </nav>
+  </section>
+
+  <div style="height: 70vh; overflow-y: scroll; position: relative;">
+  <section class="video-section">
+    <div class="video-box">
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video 1" allowfullscreen></iframe>
+    </div>
+    <div class="video-box">
+      <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" title="Video 2" allowfullscreen></iframe>
+    </div>
+    <div class="video-box">
+      <iframe src="https://www.youtube.com/embed/ysz5S6PUM-U" title="Video 3" allowfullscreen></iframe>
+    </div>
+    <div class="video-box">
+      <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" title="Video 4" allowfullscreen></iframe>
+    </div>
+    <div class="video-box">
+      <iframe src="https://www.youtube.com/embed/9bZkp7q19f0" title="Video 5" allowfullscreen></iframe>
+    </div>
+    <div class="video-box">
+      <iframe src="https://www.youtube.com/embed/V-_O7nl0Ii0" title="Video 6" allowfullscreen></iframe>
+    </div>
+    <div class="video-box">
+      <iframe src="https://www.youtube.com/embed/3JZ_D3ELwOQ" title="Video 7" allowfullscreen></iframe>
+    </div>
+    <div class="video-box">
+      <iframe src="https://www.youtube.com/embed/L_jWHffIx5E" title="Video 8" allowfullscreen></iframe>
+    </div>
+    <div class="video-box">
+      <iframe src="https://www.youtube.com/embed/eY52Zsg-KVI" title="Video 9" allowfullscreen></iframe>
+    </div>
+  </section>
+</div>
+
+  <footer>
+    &copy; 2025 Gearstride. All rights reserved.
+  </footer>
+</body>
+</html>
